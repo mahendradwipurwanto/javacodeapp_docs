@@ -23,7 +23,7 @@ When you first login, you will get param token with a key, use this token key on
 
 # **List of APi References**
 
-- [Authentication](https://github.com/mahendradwipurwanto/javacodeapp_docs/blob/main/README.md)
+- [Authentication](https://github.com/mahendradwipurwanto/javacodeapp_docs/blob/main/AUTHENTICATION.md)
 - [Users](https://github.com/mahendradwipurwanto/javacodeapp_docs/blob/main/USERS.md)
 - [Menu](https://github.com/mahendradwipurwanto/javacodeapp_docs/blob/main/MENU.md)
 - [Promo](https://github.com/mahendradwipurwanto/javacodeapp_docs/blob/main/PROMO.md)
