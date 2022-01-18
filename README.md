@@ -20,3 +20,15 @@
 
 **Use endpoint for mobile device**:
 When you first login, you will get param token with a key, use this token key on header when you make request to APi
+
+# **List of APi References**
+
+- [Authentication](https://github.com/mahendradwipurwanto/javacodeapp_docs/blob/main/README.md)
+- [Users](https://github.com/mahendradwipurwanto/javacodeapp_docs/blob/main/USERS.md)
+- [Menu](https://github.com/mahendradwipurwanto/javacodeapp_docs/blob/main/MENU.md)
+- [Promo](https://github.com/mahendradwipurwanto/javacodeapp_docs/blob/main/PROMO.md)
+- [Voucher](https://github.com/mahendradwipurwanto/javacodeapp_docs/blob/main/VOUCHER.md)
+- [Diskon](https://github.com/mahendradwipurwanto/javacodeapp_docs/blob/main/DISKON.md)
+
+
+> NB: This APi References Docs, will be updated when there are new endpoint.
