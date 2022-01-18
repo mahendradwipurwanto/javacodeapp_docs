@@ -2,11 +2,11 @@
 > use this as references of JAVA CODE APP Project, this endpoint work both for web and mobile
 
 *JavaCodeApp API*
-- Version: 1.0
-- Host: https://javacode.ngodingin.com/api/
-- Protocols: https
-- Accepts: application/json, multipart/form-data
-- Responds With: application/json
+- **Version**: 1.0
+- **Host**: https://javacode.ngodingin.com/api/
+- **Protocols**: https
+- **Accepts**: application/json, multipart/form-data
+- **Responds With**: application/json
 
 <details><summary>More Info</summary>
 <p>
