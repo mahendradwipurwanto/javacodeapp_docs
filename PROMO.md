@@ -1,6 +1,6 @@
 # PROMO
 
-- [Home Page](https://github.com/mahendradwipurwanto/javacodeapp_docs/blob/main/README.md)****
+- [Home Page](https://github.com/mahendradwipurwanto/javacodeapp_docs/blob/main/README.md)
 
 # #GET / promo
 
