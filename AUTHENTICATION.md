@@ -30,10 +30,8 @@ user auth data.
 <p>
 
 ```
-{
-    _email_ : type string,
-    _password_: type string
-}
+    email : type string,
+    password : type string
 ```
 
 </p>
@@ -129,8 +127,8 @@ user google data.
 ```
 {
     *is_google* : type string
-    _nama_ : type string,
-    _email_ : type string,
+    nama : type string,
+    email : type string,
 }
 ```
 
@@ -162,7 +160,7 @@ user google data.
                 "laporan_laporan1": true
             }
         },
-        "token": "m_app"
+        "token": token()
     }
 }
 ```
@@ -192,10 +190,54 @@ user google data.
 https://javacode.ngodingin.com/api/auth/login
 
 ```
-#Request body
+### Request body
 none.
 
-#Responses
+### Responses
+
+<details><summary>200</summary>
+<p>
+
+```
+{
+    "status_code": 200,
+    "data": {
+        "user": {
+            "is_google": true,
+            "id_user": 45,
+            "email": "test@gmail.com",
+            "nama": "test",
+            "m_roles_id": 2,
+            "akses": {
+                "master_roles": true,
+                "master_user": true,
+                "master_akses": true,
+                "pengguna_akses": true,
+                "pengguna_user": true,
+                "app_transaksi1": true,
+                "laporan_laporan1": true
+            }
+        },
+        "token": token()
+    }
+}
+```
+
+</p>
+</details>
+
+
+## #GET / logout
+
+**endpoint**
+```
+https://javacode.ngodingin.com/api/auth/logout
+
+```
+### Request body
+none.
+
+### Responses
 
 <details><summary>200</summary>
 <p>
@@ -229,50 +271,6 @@ none.
 </details>
 
 
-## #GET / logout
-
-**endpoint**
-```
-https://javacode.ngodingin.com/api/auth/logout
-
-```
-#Request body
-none.
-
-#Responses
-
-<details><summary>200</summary>
-<p>
-
-```
-{
-    "status_code": 200,
-    "data": {
-        "user": {
-            "is_google": true,
-            "id_user": 45,
-            "email": "test@gmail.com",
-            "nama": "test",
-            "m_roles_id": 2,
-            "akses": {
-                "master_roles": true,
-                "master_user": true,
-                "master_akses": true,
-                "pengguna_akses": true,
-                "pengguna_user": true,
-                "app_transaksi1": true,
-                "laporan_laporan1": true
-            }
-        },
-        "token": "m_app"
-    }
-}
-```
-
-</p>
-</details>
-
-
 
 ## #GET / logout
 
@@ -281,10 +279,10 @@ none.
 https://javacode.ngodingin.com/api/auth/logout
 
 ```
-#Request body
+## #Request body
 none.
 
-#Responses
+### Responses
 
 <details><summary>200</summary>
 <p>
