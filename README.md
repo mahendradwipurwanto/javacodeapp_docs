@@ -5,7 +5,7 @@
 - **Version**: 1.0
 - **Host**: https://javacode.ngodingin.com/api/
 - **Protocols**: https
-- **Accepts**: application/json, multipart/form-data
+- **Accepts**: application/json
 - **Responds With**: application/json
 
 <details><summary>More Info</summary>
