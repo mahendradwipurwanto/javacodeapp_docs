@@ -11,7 +11,7 @@
 <details><summary>More Info</summary>
 <p>
 
-- Database Structure: [see database structure](https://drive.google.com/file/d/1bqHTalvlo1LK_uZAnFRb_A2lbKJTBfmG/view?usp=sharing)
+- Database Structure: [see database structure](https://drive.google.com/file/d/1Lk2CtW3lzCM_QMA74b-gF5pc7gmpSxjz/view?usp=sharing)
 - Contact Email: mahendradwipurwanto@gmail.com
 - Telegram Channel: [join now](https://t.me/+fmatnn17a1UyZTQ1)
 
