@@ -19,7 +19,10 @@ https://javacode.ngodingin.com/api/order/add
     "order": {
         "id_user": 1,
         "id_voucher": 1,
-        "id_diskon": [1, 2],
+        "id_diskon": [
+            1,
+            2
+        ],
         "diskon": 20,
         "total_bayar": 100000
     },
@@ -27,11 +30,21 @@ https://javacode.ngodingin.com/api/order/add
         {
             "id_menu": 2,
             "harga": 18000,
+            "level": 1,
+            "topping": [
+                1,
+                2
+            ],
             "jumlah": 2
         },
         {
             "id_menu": 3,
             "harga": 10000,
+            "level": 2,
+            "topping": [
+                2,
+                3
+            ],
             "jumlah": 1
         }
     ]
@@ -49,7 +62,7 @@ https://javacode.ngodingin.com/api/order/add
         "id_user": integer,
         "id_voucher": integer, #not required, choose between voucher or diskon
         "id_diskon": array(id_diskon: integer), #not required, choose between voucher or diskon
-        "diskon": integer,
+        "diskon": integer, #not required, choose between voucher or diskon
         "total_bayar": integer
     },
     "menu": [
@@ -95,6 +108,20 @@ https://javacode.ngodingin.com/api/order/add
     "status_code": 422,
     "errors": [
         "<span class=\"gump-field\">Id User</span> harus diisi"
+    ]
+}
+```
+
+</p>
+</details>
+<details><summary>403</summary>
+<p>
+
+```
+{
+    "status_code": 403,
+    "errors": [
+        "Mohon maaf, anda tidak mempunyai akses"
     ]
 }
 ```
