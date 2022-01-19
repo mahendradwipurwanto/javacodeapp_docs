@@ -47,6 +47,20 @@ none.
 
 </p>
 </details>
+<details><summary>403</summary>
+<p>
+
+```
+{
+    "status_code": 403,
+    "errors": [
+        "Mohon maaf, anda tidak mempunyai akses"
+    ]
+}
+```
+
+</p>
+</details>
 
 
 # #GET / detail diskon
@@ -96,6 +110,20 @@ none.
             "syarat_ketentuan": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "foto": null
         }
+    ]
+}
+```
+
+</p>
+</details>
+<details><summary>403</summary>
+<p>
+
+```
+{
+    "status_code": 403,
+    "errors": [
+        "Mohon maaf, anda tidak mempunyai akses"
     ]
 }
 ```

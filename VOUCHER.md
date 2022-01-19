@@ -29,7 +29,6 @@ none.
             "info_voucher": "https://javacode.ngodingin.com/img/voucher-test.jpg",
             "periode_mulai": 1610838000,
             "periode_selesai": 1613516400,
-            "type": 0,
             "jumlah": 1,
             "catatan": null,
             "created_at": "2022-01-17 13:52:30",
@@ -45,7 +44,6 @@ none.
             "info_voucher": "https://javacode.ngodingin.com/img/voucher-test.jpg",
             "periode_mulai": 1610838000,
             "periode_selesai": 1613516400,
-            "type": 0,
             "jumlah": 1,
             "catatan": null,
             "created_at": "2022-01-17 13:52:37",
@@ -53,6 +51,20 @@ none.
             "is_deleted": 0,
             "nama": "Birthday"
         }
+    ]
+}
+```
+
+</p>
+</details>
+<details><summary>403</summary>
+<p>
+
+```
+{
+    "status_code": 403,
+    "errors": [
+        "Mohon maaf, anda tidak mempunyai akses"
     ]
 }
 ```
@@ -126,6 +138,20 @@ none.
 
 </p>
 </details>
+<details><summary>403</summary>
+<p>
+
+```
+{
+    "status_code": 403,
+    "errors": [
+        "Mohon maaf, anda tidak mempunyai akses"
+    ]
+}
+```
+
+</p>
+</details>
 
 
 # #GET / detail voucher
@@ -172,6 +198,20 @@ none.
             "is_deleted": 0,
             "nama": "Koordinator Program kekompakan"
         }
+    ]
+}
+```
+
+</p>
+</details>
+<details><summary>403</summary>
+<p>
+
+```
+{
+    "status_code": 403,
+    "errors": [
+        "Mohon maaf, anda tidak mempunyai akses"
     ]
 }
 ```

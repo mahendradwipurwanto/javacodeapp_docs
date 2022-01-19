@@ -34,6 +34,20 @@ none.
 
 </p>
 </details>
+<details><summary>403</summary>
+<p>
+
+```
+{
+    "status_code": 403,
+    "errors": [
+        "Mohon maaf, anda tidak mempunyai akses"
+    ]
+}
+```
+
+</p>
+</details>
 
 
 # #GET / diskon list of one user
@@ -78,6 +92,20 @@ none.
 
 </p>
 </details>
+<details><summary>403</summary>
+<p>
+
+```
+{
+    "status_code": 403,
+    "errors": [
+        "Mohon maaf, anda tidak mempunyai akses"
+    ]
+}
+```
+
+</p>
+</details>
 
 
 # #GET / detail diskon
@@ -116,6 +144,20 @@ none.
             "nama": "Mengisi survey",
             "diskon": 10
         }
+    ]
+}
+```
+
+</p>
+</details>
+<details><summary>403</summary>
+<p>
+
+```
+{
+    "status_code": 403,
+    "errors": [
+        "Mohon maaf, anda tidak mempunyai akses"
     ]
 }
 ```

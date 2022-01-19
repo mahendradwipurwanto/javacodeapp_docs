@@ -52,6 +52,20 @@ none.
 
 </p>
 </details>
+<details><summary>403</summary>
+<p>
+
+```
+{
+    "status_code": 403,
+    "errors": [
+        "Mohon maaf, anda tidak mempunyai akses"
+    ]
+}
+```
+
+</p>
+</details>
 
 
 # #GET / user detail
@@ -107,6 +121,20 @@ none.
     "status_code": 422,
     "errors": [
         "Tidak dapat menemukan data"
+    ]
+}
+```
+
+</p>
+</details>
+<details><summary>403</summary>
+<p>
+
+```
+{
+    "status_code": 403,
+    "errors": [
+        "Mohon maaf, anda tidak mempunyai akses"
     ]
 }
 ```
@@ -180,6 +208,20 @@ https://javacode.ngodingin.com/api/user/update/{id_user}
     "status_code": 422,
     "errors": [
         "Tidak dapat menemukan data"
+    ]
+}
+```
+
+</p>
+</details>
+<details><summary>403</summary>
+<p>
+
+```
+{
+    "status_code": 403,
+    "errors": [
+        "Mohon maaf, anda tidak mempunyai akses"
     ]
 }
 ```

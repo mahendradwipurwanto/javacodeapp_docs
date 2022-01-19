@@ -30,8 +30,10 @@ user auth data.
 <p>
 
 ```
-    email : type string,
-    password : type string
+{
+    _email_ : type string,
+    _password_: type string
+}
 ```
 
 </p>
@@ -47,6 +49,7 @@ user auth data.
     "status_code": 200,
     "data": {
         "user": {
+            "is_google": true,
             "id_user": 1,
             "email": "admin@gmail.com",
             "nama": "Super Admin",
@@ -61,7 +64,7 @@ user auth data.
                 "laporan_laporan1": true
             }
         },
-        "token": token()
+        "token": "m_app"
     }
 }
 ```
@@ -125,9 +128,9 @@ user google data.
 
 ```
 {
-    is_google : type string
-    nama : type string,
-    email : type string,
+    *is_google* : type string
+    _nama_ : type string,
+    _email_ : type string,
 }
 ```
 
@@ -159,7 +162,7 @@ user google data.
                 "laporan_laporan1": true
             }
         },
-        "token": token()
+        "token": "m_app"
     }
 }
 ```
@@ -189,10 +192,10 @@ user google data.
 https://javacode.ngodingin.com/api/auth/login
 
 ```
-### Request body
+#Request body
 none.
 
-### Responses
+#Responses
 
 <details><summary>200</summary>
 <p>
@@ -217,7 +220,7 @@ none.
                 "laporan_laporan1": true
             }
         },
-        "token": token()
+        "token": "m_app"
     }
 }
 ```
@@ -233,10 +236,10 @@ none.
 https://javacode.ngodingin.com/api/auth/logout
 
 ```
-### Request body
+#Request body
 none.
 
-### Responses
+#Responses
 
 <details><summary>200</summary>
 <p>
@@ -278,10 +281,10 @@ none.
 https://javacode.ngodingin.com/api/auth/logout
 
 ```
-## #Request body
+#Request body
 none.
 
-### Responses
+#Responses
 
 <details><summary>200</summary>
 <p>

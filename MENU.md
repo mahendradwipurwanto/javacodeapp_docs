@@ -51,6 +51,20 @@ none.
 
 </p>
 </details>
+<details><summary>403</summary>
+<p>
+
+```
+{
+    "status_code": 403,
+    "errors": [
+        "Mohon maaf, anda tidak mempunyai akses"
+    ]
+}
+```
+
+</p>
+</details>
 
 
 
@@ -94,6 +108,20 @@ none.
         "created_at": "2022-01-17 09:42:03",
         "created_by": 1
     }
+}
+```
+
+</p>
+</details>
+<details><summary>403</summary>
+<p>
+
+```
+{
+    "status_code": 403,
+    "errors": [
+        "Mohon maaf, anda tidak mempunyai akses"
+    ]
 }
 ```
 
@@ -185,6 +213,20 @@ none.
 
 </p>
 </details>
+<details><summary>403</summary>
+<p>
+
+```
+{
+    "status_code": 403,
+    "errors": [
+        "Mohon maaf, anda tidak mempunyai akses"
+    ]
+}
+```
+
+</p>
+</details>
 
 
 
@@ -200,28 +242,24 @@ https://javacode.ngodingin.com/api/menu/add
 <details><summary>Example Request</summary>
 <p>
 
-```
 {
     "nama": "bakso beranak",
     "kategori": "makanan",
     "harga": 10000,
     "status": 1
 }
-```
 
 </p>
 </details>
 <details><summary>Schema</summary>
 <p>
 
- ```
 {
     "nama": string,
     "kategori": string,
     "harga": integer,
     "status": integer
 }
-```
 
 </p>
 </details>
@@ -260,6 +298,20 @@ https://javacode.ngodingin.com/api/menu/add
     "status_code": 422,
     "errors": [
         "Terjadi masalah pada server"
+    ]
+}
+```
+
+</p>
+</details>
+<details><summary>403</summary>
+<p>
+
+```
+{
+    "status_code": 403,
+    "errors": [
+        "Mohon maaf, anda tidak mempunyai akses"
     ]
 }
 ```
