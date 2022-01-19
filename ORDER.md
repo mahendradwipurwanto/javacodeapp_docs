@@ -223,7 +223,7 @@ none.
 https://javacode.ngodingin.com/api/order/status/{id_user}/{status}
 ```
 
-**status:**
+### *status:*
 0. diproses
 1. selesai
 2. dibatalkan
