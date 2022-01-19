@@ -47,7 +47,6 @@ user auth data.
     "status_code": 200,
     "data": {
         "user": {
-            "is_google": true,
             "id_user": 1,
             "email": "admin@gmail.com",
             "nama": "Super Admin",
@@ -62,7 +61,7 @@ user auth data.
                 "laporan_laporan1": true
             }
         },
-        "token": "m_app"
+        "token": token()
     }
 }
 ```
@@ -126,7 +125,7 @@ user google data.
 
 ```
 {
-    *is_google* : type string
+    is_google : type string
     nama : type string,
     email : type string,
 }
