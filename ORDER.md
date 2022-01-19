@@ -19,6 +19,7 @@ https://javacode.ngodingin.com/api/order/add
     "order": {
         "id_user": 1,
         "id_voucher": 1,
+        "voucher": 10000,
         "id_diskon": [
             1,
             2
@@ -61,6 +62,7 @@ https://javacode.ngodingin.com/api/order/add
     "order": {
         "id_user": integer,
         "id_voucher": integer, #not required, choose between voucher or diskon
+        "voucher": integer, #not required, choose between voucher or diskon (nominal of used voucher)
         "id_diskon": array(id_diskon: integer), #not required, choose between voucher or diskon
         "diskon": integer, #not required, choose between voucher or diskon
         "total_bayar": integer
@@ -69,11 +71,15 @@ https://javacode.ngodingin.com/api/order/add
         {
             "id_menu": integer,
             "harga": integer,
+            "level": integer, #not required
+            "topping": array(topping: integer), #not required
             "jumlah": integer
         },
         {
             "id_menu": integer,
             "harga": integer,
+            "level": integer, #not required
+            "topping": array(topping: integer), #not required
             "jumlah": integer
         }
     ]
