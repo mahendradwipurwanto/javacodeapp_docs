@@ -47,8 +47,8 @@ https://javacode.ngodingin.com/api/order/add
 {
     "order": {
         "id_user": integer,
-        "id_voucher": integer,
-        "id_diskon": array(id_diskon: integer),
+        "id_voucher": integer, #not required, choose between voucher or diskon
+        "id_diskon": array(id_diskon: integer), #not required, choose between voucher or diskon
         "diskon": integer,
         "total_bayar": integer
     },
