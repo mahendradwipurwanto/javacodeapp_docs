@@ -29,6 +29,6 @@ When you first login, you will get param token with a key, use this token key on
 - [Promo](https://github.com/mahendradwipurwanto/javacodeapp_docs/blob/main/PROMO.md)
 - [Voucher](https://github.com/mahendradwipurwanto/javacodeapp_docs/blob/main/VOUCHER.md)
 - [Diskon](https://github.com/mahendradwipurwanto/javacodeapp_docs/blob/main/DISKON.md)
-
+- [Order](https://github.com/mahendradwipurwanto/javacodeapp_docs/blob/main/ORDER.md)
 
 > NB: This APi References Docs, will be updated when there are new endpoint.
