@@ -19,7 +19,7 @@
 
 - Database Structure: [see database structure](https://drive.google.com/file/d/1O9_nBYOvMWNJy-YGkYmA9iGby_RypAaQ/view?usp=sharing)
 - Contact Email: mahendradwipurwanto@gmail.com
-- Telegram Channel: [join now](https://t.me/+fmatnn17a1UyZTQ1)
+- Telegram Log Channel: [join now](https://t.me/+fmatnn17a1UyZTQ1)
 
 </p>
 </details>

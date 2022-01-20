@@ -23,37 +23,38 @@ none.
     "data": [
         {
             "id_voucher": 1,
-            "id_promo": 1,
+            "nama": "Koordinator Program kekompakan",
             "id_user": 1,
-            "nominal": 100000,
-            "info_voucher": "https://javacode.ngodingin.com/img/voucher-test.jpg",
+            "nominal": 50000,
+            "info_voucher": "https://i.ibb.co/bJ10gcZ/Voucher-Java-Code-app-01.jpg",
             "periode_mulai": 1610838000,
             "periode_selesai": 1613516400,
-            "jumlah": 1,
-            "catatan": null,
-            "created_at": "2022-01-17 13:52:30",
-            "created_by": 2,
-            "is_deleted": 0,
-            "nama": "Koordinator Program kekompakan"
+            "type": 1,
+            "status": 1,
+            "catatan": null
         },
         {
             "id_voucher": 2,
-            "id_promo": 2,
-            "id_user": 1,
-            "nominal": 50000,
-            "info_voucher": "https://javacode.ngodingin.com/img/voucher-test.jpg",
+            "nama": "Birthday",
+            "id_user": 47,
+            "nominal": 25000,
+            "info_voucher": "https://i.ibb.co/bJ10gcZ/Voucher-Java-Code-app-01.jpg",
             "periode_mulai": 1610838000,
             "periode_selesai": 1613516400,
-            "jumlah": 1,
-            "catatan": null,
-            "created_at": "2022-01-17 13:52:37",
-            "created_by": 1,
-            "is_deleted": 0,
-            "nama": "Birthday"
+            "type": 0,
+            "status": 1,
+            "catatan": null
         }
     ]
 }
 ```
+
+</p>
+</details>
+<details><summary>204</summary>
+<p>
+
+> This mean that, there is no data can be found on database
 
 </p>
 </details>
@@ -88,7 +89,7 @@ none.
 <details><summary>1 Path Parameter</summary>
 <p>
 
-> id_user: integer
+> id_user: integer #required
 
 </p>
 </details>
@@ -104,37 +105,26 @@ none.
     "data": [
         {
             "id_voucher": 1,
-            "id_promo": 1,
-            "id_user": 1,
-            "nominal": 100000,
-            "info_voucher": "https://javacode.ngodingin.com/img/voucher-test.jpg",
-            "periode_mulai": 1610838000,
-            "periode_selesai": 1613516400,
-            "jumlah": 1,
-            "catatan": null,
-            "created_at": "2022-01-17 13:52:30",
-            "created_by": 2,
-            "is_deleted": 0,
-            "nama": "Koordinator Program kekompakan"
-        },
-        {
-            "id_voucher": 2,
-            "id_promo": 2,
+            "nama": "Koordinator Program kekompakan",
             "id_user": 1,
             "nominal": 50000,
-            "info_voucher": "https://javacode.ngodingin.com/img/voucher-test.jpg",
+            "info_voucher": "https://i.ibb.co/bJ10gcZ/Voucher-Java-Code-app-01.jpg",
             "periode_mulai": 1610838000,
             "periode_selesai": 1613516400,
-            "jumlah": 1,
-            "catatan": null,
-            "created_at": "2022-01-17 13:52:37",
-            "created_by": 1,
-            "is_deleted": 0,
-            "nama": "Birthday"
+            "type": 1,
+            "status": 1,
+            "catatan": null
         }
     ]
 }
 ```
+
+</p>
+</details>
+<details><summary>204</summary>
+<p>
+
+> This mean that, there is no data can be found on database
 
 </p>
 </details>
@@ -185,22 +175,26 @@ none.
     "data": [
         {
             "id_voucher": 1,
-            "id_promo": 1,
+            "nama": "Koordinator Program kekompakan",
             "id_user": 1,
-            "nominal": 100000,
-            "info_voucher": "https://javacode.ngodingin.com/img/voucher-test.jpg",
+            "nominal": 50000,
+            "info_voucher": "https://i.ibb.co/bJ10gcZ/Voucher-Java-Code-app-01.jpg",
             "periode_mulai": 1610838000,
             "periode_selesai": 1613516400,
-            "jumlah": 1,
-            "catatan": null,
-            "created_at": "2022-01-17 13:52:30",
-            "created_by": 2,
-            "is_deleted": 0,
-            "nama": "Koordinator Program kekompakan"
+            "type": 1,
+            "status": 1,
+            "catatan": null
         }
     ]
 }
 ```
+
+</p>
+</details>
+<details><summary>204</summary>
+<p>
+
+> This mean that, there is no data can be found on database
 
 </p>
 </details>

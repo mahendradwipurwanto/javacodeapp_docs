@@ -2,6 +2,13 @@
 
 - [Home Page](https://github.com/mahendradwipurwanto/javacodeapp_docs/blob/main/README.md)
 
+**Status Order:**
+0. dalam antrian
+1. sedang siapkan
+2. bisa diambil
+3. sudah diambil
+4. dibatalkan
+
 # #POST / order
 
 **endpoint**
@@ -16,7 +23,7 @@ https://javacode.ngodingin.com/api/order/add
 
 ```
 {
-    "Content-Type": "application/json", #required
+    "Content-Type": "application/json"
 }
 ```
 
@@ -33,13 +40,8 @@ https://javacode.ngodingin.com/api/order/add
     "order": {
         "id_user": 1,
         "id_voucher": 1,
-        "id_diskon": [
-            1,
-            2
-        ],
-        "diskon": 20,
-        "potongan": 10000,
-        "total_bayar": 100000
+        "potongan": 45000,
+        "total_bayar": 12800
     },
     "menu": [
         {
@@ -74,11 +76,11 @@ https://javacode.ngodingin.com/api/order/add
 ```
 {
     "order": {
-        "id_user": integer,
+        "id_user": integer, #required
         "id_voucher": integer, #not required, choose between voucher or diskon
-        "voucher": integer, #not required, choose between voucher or diskon (nominal of used voucher)
         "id_diskon": array(id_diskon: integer), #not required, choose between voucher or diskon
         "diskon": integer, #not required, choose between voucher or diskon
+        "potongan": integer, #required
         "total_bayar": integer
     },
     "menu": [
@@ -132,126 +134,14 @@ https://javacode.ngodingin.com/api/order/add
 }
 ```
 
-</p>
-</details>
-<details><summary>403</summary>
-<p>
-
 ```
 {
-    "status_code": 403,
+    "status_code": 422,
     "errors": [
-        "Mohon maaf, anda tidak mempunyai akses"
+        "Terjadi masalah pada server"
     ]
 }
 ```
-
-</p>
-</details>
-
-
-
-# #GET / order list of one user
-
-**endpoint**
-```
-https://javacode.ngodingin.com/api/order/user/{id_user}
-```
-
-### Request body
-none.
-
-### Request Parameters
-
-<details><summary>1 Path Parameter</summary>
-<p>
-
-> id_user: integer
-
-</p>
-</details>
-
-### Responses
-
-<details><summary>200</summary>
-<p>
-
-```
-{
-    "status_code": 200,
-    "data": [
-        {
-            "id_order": 35,
-            "no_struk": "001/KWT/01/2022",
-            "nama": "dev noersy",
-            "tanggal": "2022-01-19",
-            "total_bayar": 12000,
-            "status": 0,
-            "menu": [
-                {
-                    "id_menu": 9,
-                    "nama": "bakso beranak",
-                    "foto": "https://javacode.ngodingin.com/img/coto.jpg",
-                    "jumlah": 1,
-                    "harga": "10000",
-                    "total": 10000
-                }
-            ]
-        },
-        {
-            "id_order": 37,
-            "no_struk": "002/KWT/01/2022",
-            "nama": "dev noersy",
-            "tanggal": "2022-01-19",
-            "total_bayar": 12000,
-            "status": 3,
-            "menu": [
-                {
-                    "id_menu": 3,
-                    "nama": "thai tea",
-                    "foto": "https://javacode.ngodingin.com/img/coto.jpg",
-                    "jumlah": 2,
-                    "harga": "18000",
-                    "total": 36000
-                },
-                {
-                    "id_menu": 9,
-                    "nama": "bakso beranak",
-                    "foto": "https://javacode.ngodingin.com/img/coto.jpg",
-                    "jumlah": 1,
-                    "harga": "10000",
-                    "total": 10000
-                }
-            ]
-        },
-        {
-            "id_order": 38,
-            "no_struk": "003/KWT/01/2022",
-            "nama": "dev noersy",
-            "tanggal": "2022-01-19",
-            "total_bayar": 8100,
-            "status": 0,
-            "menu": [
-                {
-                    "id_menu": 9,
-                    "nama": "bakso beranak",
-                    "foto": "https://javacode.ngodingin.com/img/coto.jpg",
-                    "jumlah": 1,
-                    "harga": "9000",
-                    "total": 9000
-                }
-            ]
-        }
-    ]
-}
-```
-
-</p>
-</details>
-<details><summary>204</summary>
-<p>
-
-> This mean that, there is no data can be found on database
 
 </p>
 </details>
@@ -295,17 +185,19 @@ none.
             "id_order": 35,
             "no_struk": "001/KWT/01/2022",
             "nama": "dev noersy",
-            "tanggal": "2022-01-19",
             "total_bayar": 12000,
+            "tanggal": "2022-01-19",
             "status": 0,
             "menu": [
                 {
                     "id_menu": 9,
-                    "nama": "bakso beranak",
-                    "foto": "https://javacode.ngodingin.com/img/coto.jpg",
+                    "kategori": "makanan",
+                    "nama": "Nasi Goreng",
+                    "foto": "https://i.ibb.co/mRJnq3Z/nasi-goreng.jpg",
                     "jumlah": 1,
                     "harga": "10000",
-                    "total": 10000
+                    "total": 10000,
+                    "catatan": "test"
                 }
             ]
         },
@@ -313,25 +205,138 @@ none.
             "id_order": 37,
             "no_struk": "002/KWT/01/2022",
             "nama": "dev noersy",
-            "tanggal": "2022-01-19",
             "total_bayar": 12000,
+            "tanggal": "2022-01-19",
             "status": 3,
             "menu": [
                 {
                     "id_menu": 3,
-                    "nama": "thai tea",
-                    "foto": "https://javacode.ngodingin.com/img/coto.jpg",
+                    "kategori": "minuman",
+                    "nama": "Lemon Tea",
+                    "foto": "https://i.ibb.co/RNXcV2s/chicken-katsu.jpg",
                     "jumlah": 2,
                     "harga": "18000",
-                    "total": 36000
+                    "total": 36000,
+                    "catatan": "Testing"
                 },
                 {
                     "id_menu": 9,
-                    "nama": "bakso beranak",
-                    "foto": "https://javacode.ngodingin.com/img/coto.jpg",
+                    "kategori": "makanan",
+                    "nama": "Nasi Goreng",
+                    "foto": "https://i.ibb.co/mRJnq3Z/nasi-goreng.jpg",
                     "jumlah": 1,
                     "harga": "10000",
-                    "total": 10000
+                    "total": 10000,
+                    "catatan": ""
+                }
+            ]
+        }
+    ]
+}
+```
+
+</p>
+</details>
+<details><summary>204</summary>
+<p>
+
+> This mean that, there is no data can be found on database
+
+</p>
+</details>
+<details><summary>403</summary>
+<p>
+
+```
+{
+    "status_code": 403,
+    "errors": [
+        "Mohon maaf, anda tidak mempunyai akses"
+    ]
+}
+```
+
+</p>
+</details>
+
+
+
+# #GET / order list of one user
+
+**endpoint**
+```
+https://javacode.ngodingin.com/api/order/user/{id_user}
+```
+
+### Request body
+none.
+
+### Request Parameters
+
+<details><summary>1 Path Parameter</summary>
+<p>
+
+> id_user: integer #required
+
+</p>
+</details>
+
+### Responses
+
+<details><summary>200</summary>
+<p>
+
+```
+{
+    "status_code": 200,
+    "data": [
+        {
+            "id_order": 35,
+            "no_struk": "001/KWT/01/2022",
+            "nama": "dev noersy",
+            "total_bayar": 12000,
+            "tanggal": "2022-01-19",
+            "status": 0,
+            "menu": [
+                {
+                    "id_menu": 9,
+                    "kategori": "makanan",
+                    "nama": "Nasi Goreng",
+                    "foto": "https://i.ibb.co/mRJnq3Z/nasi-goreng.jpg",
+                    "jumlah": 1,
+                    "harga": "10000",
+                    "total": 10000,
+                    "catatan": "test"
+                }
+            ]
+        },
+        {
+            "id_order": 37,
+            "no_struk": "002/KWT/01/2022",
+            "nama": "dev noersy",
+            "total_bayar": 12000,
+            "tanggal": "2022-01-19",
+            "status": 3,
+            "menu": [
+                {
+                    "id_menu": 3,
+                    "kategori": "minuman",
+                    "nama": "Lemon Tea",
+                    "foto": "https://i.ibb.co/RNXcV2s/chicken-katsu.jpg",
+                    "jumlah": 2,
+                    "harga": "18000",
+                    "total": 36000,
+                    "catatan": "Testing"
+                },
+                {
+                    "id_menu": 9,
+                    "kategori": "makanan",
+                    "nama": "Nasi Goreng",
+                    "foto": "https://i.ibb.co/mRJnq3Z/nasi-goreng.jpg",
+                    "jumlah": 1,
+                    "harga": "10000",
+                    "total": 10000,
+                    "catatan": ""
                 }
             ]
         },
@@ -339,17 +344,19 @@ none.
             "id_order": 38,
             "no_struk": "003/KWT/01/2022",
             "nama": "dev noersy",
-            "tanggal": "2022-01-19",
             "total_bayar": 8100,
-            "status": 0,
+            "tanggal": "2022-01-19",
+            "status": 1,
             "menu": [
                 {
                     "id_menu": 9,
-                    "nama": "bakso beranak",
-                    "foto": "https://javacode.ngodingin.com/img/coto.jpg",
+                    "kategori": "makanan",
+                    "nama": "Nasi Goreng",
+                    "foto": "https://i.ibb.co/mRJnq3Z/nasi-goreng.jpg",
                     "jumlah": 1,
                     "harga": "9000",
-                    "total": 9000
+                    "total": 9000,
+                    "catatan": "Testing"
                 }
             ]
         }
@@ -390,13 +397,6 @@ none.
 https://javacode.ngodingin.com/api/order/status/{id_user}/{status}
 ```
 
-**status:**
-0. dalam antrian
-1. sedang siapkan
-2. bisa diambil
-3. sudah diambil
-4. dibatalkan
-
 ### Request body
 none.
 
@@ -405,9 +405,9 @@ none.
 <details><summary>2 Path Parameter</summary>
 <p>
 
-> id_user: integer
+> id_user: integer #required
 
-> status: integer
+> status: integer #required
 
 </p>
 </details>
@@ -425,17 +425,120 @@ none.
             "id_order": 35,
             "no_struk": "001/KWT/01/2022",
             "nama": "dev noersy",
-            "tanggal": "2022-01-19",
             "total_bayar": 12000,
+            "tanggal": "2022-01-19",
             "status": 0,
             "menu": [
                 {
                     "id_menu": 9,
-                    "nama": "bakso beranak",
-                    "foto": "https://javacode.ngodingin.com/img/coto.jpg",
+                    "kategori": "makanan",
+                    "nama": "Nasi Goreng",
+                    "foto": "https://i.ibb.co/mRJnq3Z/nasi-goreng.jpg",
                     "jumlah": 1,
                     "harga": "10000",
-                    "total": 10000
+                    "total": 10000,
+                    "catatan": "test"
+                }
+            ]
+        },
+        {
+            "id_order": 43,
+            "no_struk": "006/KWT/01/2022",
+            "nama": "dev noersy",
+            "total_bayar": 11700,
+            "tanggal": "2022-01-20",
+            "status": 0,
+            "menu": [
+                {
+                    "id_menu": 9,
+                    "kategori": "makanan",
+                    "nama": "Nasi Goreng",
+                    "foto": "https://i.ibb.co/mRJnq3Z/nasi-goreng.jpg",
+                    "jumlah": 1,
+                    "harga": "9000",
+                    "total": 9000,
+                    "catatan": "Testing"
+                }
+            ]
+        }
+    ]
+}
+```
+
+</p>
+</details>
+<details><summary>204</summary>
+<p>
+
+> This mean that, there is no data can be found on database
+
+</p>
+</details>
+<details><summary>403</summary>
+<p>
+
+```
+{
+    "status_code": 403,
+    "errors": [
+        "Mohon maaf, anda tidak mempunyai akses"
+    ]
+}
+```
+
+</p>
+</details>
+
+
+
+# #GET / order list of one user by status is process (0- dalam antrian, 1 - sedang disiapkan, 2 - bisa diambil)
+
+**endpoint**
+```
+https://javacode.ngodingin.com/api/order/status/{id_user}/{status}
+```
+
+### Request body
+none.
+
+### Request Parameters
+
+<details><summary>2 Path Parameter</summary>
+<p>
+
+> id_user: integer #required
+
+> status: integer #required
+
+</p>
+</details>
+
+### Responses
+
+<details><summary>200</summary>
+<p>
+
+```
+{
+    "status_code": 200,
+    "data": [
+        {
+            "id_order": 35,
+            "no_struk": "001/KWT/01/2022",
+            "nama": "dev noersy",
+            "total_bayar": 12000,
+            "tanggal": "2022-01-19",
+            "status": 0,
+            "menu": [
+                {
+                    "id_menu": 9,
+                    "kategori": "makanan",
+                    "nama": "Nasi Goreng",
+                    "foto": "https://i.ibb.co/mRJnq3Z/nasi-goreng.jpg",
+                    "jumlah": 1,
+                    "harga": "10000",
+                    "total": 10000,
+                    "catatan": "test"
                 }
             ]
         },
@@ -443,17 +546,19 @@ none.
             "id_order": 38,
             "no_struk": "003/KWT/01/2022",
             "nama": "dev noersy",
-            "tanggal": "2022-01-19",
             "total_bayar": 8100,
-            "status": 0,
+            "tanggal": "2022-01-19",
+            "status": 1,
             "menu": [
                 {
                     "id_menu": 9,
-                    "nama": "bakso beranak",
-                    "foto": "https://javacode.ngodingin.com/img/coto.jpg",
+                    "kategori": "makanan",
+                    "nama": "Nasi Goreng",
+                    "foto": "https://i.ibb.co/mRJnq3Z/nasi-goreng.jpg",
                     "jumlah": 1,
                     "harga": "9000",
-                    "total": 9000
+                    "total": 9000,
+                    "catatan": "Testing"
                 }
             ]
         }
@@ -502,7 +607,7 @@ none.
 <details><summary>1 Path Parameter</summary>
 <p>
 
-> id_user: integer
+> id_user: integer #required
 
 </p>
 </details>
@@ -520,25 +625,49 @@ none.
             "id_order": 37,
             "no_struk": "002/KWT/01/2022",
             "nama": "dev noersy",
-            "tanggal": "2022-01-19",
             "total_bayar": 12000,
+            "tanggal": "2022-01-19",
             "status": 3,
             "menu": [
                 {
                     "id_menu": 3,
-                    "nama": "thai tea",
-                    "foto": "https://javacode.ngodingin.com/img/coto.jpg",
+                    "kategori": "minuman",
+                    "nama": "Lemon Tea",
+                    "foto": "https://i.ibb.co/RNXcV2s/chicken-katsu.jpg",
                     "jumlah": 2,
                     "harga": "18000",
-                    "total": 36000
+                    "total": 36000,
+                    "catatan": "Testing"
                 },
                 {
                     "id_menu": 9,
-                    "nama": "bakso beranak",
-                    "foto": "https://javacode.ngodingin.com/img/coto.jpg",
+                    "kategori": "makanan",
+                    "nama": "Nasi Goreng",
+                    "foto": "https://i.ibb.co/mRJnq3Z/nasi-goreng.jpg",
                     "jumlah": 1,
                     "harga": "10000",
-                    "total": 10000
+                    "total": 10000,
+                    "catatan": ""
+                }
+            ]
+        },
+        {
+            "id_order": 40,
+            "no_struk": "005/KWT/01/2022",
+            "nama": "dev noersy",
+            "total_bayar": 8100,
+            "tanggal": "2022-01-19",
+            "status": 4,
+            "menu": [
+                {
+                    "id_menu": 9,
+                    "kategori": "makanan",
+                    "nama": "Nasi Goreng",
+                    "foto": "https://i.ibb.co/mRJnq3Z/nasi-goreng.jpg",
+                    "jumlah": 1,
+                    "harga": "9000",
+                    "total": 9000,
+                    "catatan": "Testing"
                 }
             ]
         }
@@ -587,7 +716,7 @@ none.
 <details><summary>1 Path Parameter</summary>
 <p>
 
-> id_order: integer
+> id_order: integer #required
 
 </p>
 </details>
@@ -602,33 +731,39 @@ none.
     "status_code": 200,
     "data": {
         "order": {
-            "id_order": 12,
-            "no_struk": "001/KWT/01/2022",
-            "nama": "Super Admin",
-            "tanggal": "2022-01-19",
-            "diskon": null,
-            "voucher": 10000,
-            "total_bayar": 100000
+            "id_order": 43,
+            "no_struk": "006/KWT/01/2022",
+            "nama": "dev noersy",
+            "id_voucher": 0,
+            "nama_voucher": null,
+            "diskon": 10,
+            "potongan": 1300,
+            "total_bayar": 11700,
+            "tanggal": "2022-01-20",
+            "status": 0
         },
         "detail": [
             {
-                "id_menu": 2,
-                "nama": "coto makassar",
-                "jumlah": 2,
-                "harga": "18000",
-                "total": 36000
-            },
-            {
-                "id_menu": 3,
-                "nama": "thai tea",
+                "id_menu": 9,
+                "kategori": "makanan",
+                "nama": "Nasi Goreng",
+                "foto": "https://i.ibb.co/mRJnq3Z/nasi-goreng.jpg",
                 "jumlah": 1,
-                "harga": "10000",
-                "total": 10000
+                "harga": "9000",
+                "total": 9000,
+                "catatan": "Testing"
             }
         ]
     }
 }
 ```
+
+</p>
+</details>
+<details><summary>204</summary>
+<p>
+
+> This mean that, there is no data can be found on database
 
 </p>
 </details>

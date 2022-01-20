@@ -23,31 +23,32 @@ none.
     "data": [
         {
             "id_menu": 2,
-            "nama": "coto makassar",
+            "nama": "Ayam Preksu",
             "kategori": "makanan",
             "harga": 18000,
             "deskripsi": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "foto": null,
-            "status": 1,
-            "is_deleted": 0,
-            "created_at": "2022-01-17 09:42:03",
-            "created_by": 1
+            "foto": "https://i.ibb.co/5F0wY8N/ayam-preksu.jpg",
+            "status": 1
         },
         {
             "id_menu": 3,
-            "nama": "thai tea",
+            "nama": "Lemon Tea",
             "kategori": "minuman",
             "harga": 9000,
             "deskripsi": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "foto": null,
-            "status": 1,
-            "is_deleted": 0,
-            "created_at": "2022-01-17 09:42:03",
-            "created_by": 1
+            "foto": "https://i.ibb.co/RNXcV2s/chicken-katsu.jpg",
+            "status": 1
         }
     ]
 }
 ```
+
+</p>
+</details>
+<details><summary>204</summary>
+<p>
+
+> This mean that, there is no data can be found on database
 
 </p>
 </details>
@@ -83,7 +84,7 @@ none.
 <details><summary>1 Path Parameter</summary>
 <p>
 
-> kategori: string
+> kategori: string #required
 
 </p>
 </details>
@@ -96,20 +97,35 @@ none.
 ```
 {
     "status_code": 200,
-    "data": {
-        "id_menu": 2,
-        "nama": "coto makassar",
-        "kategori": "makanan",
-        "harga": 18000,
-        "deskripsi": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "foto": null,
-        "status": 1,
-        "is_deleted": 0,
-        "created_at": "2022-01-17 09:42:03",
-        "created_by": 1
-    }
+    "data": [
+        {
+            "id_menu": 2,
+            "nama": "Ayam Preksu",
+            "kategori": "makanan",
+            "harga": 18000,
+            "deskripsi": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "foto": "https://i.ibb.co/5F0wY8N/ayam-preksu.jpg",
+            "status": 1
+        },
+        {
+            "id_menu": 4,
+            "nama": "Chiken Katsu",
+            "kategori": "makanan",
+            "harga": 12000,
+            "deskripsi": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "foto": "https://i.ibb.co/Q9rL5f0/lemon-tea.jpg",
+            "status": 1
+        }
+    ]
 }
 ```
+
+</p>
+</details>
+<details><summary>204</summary>
+<p>
+
+> This mean that, there is no data can be found on database
 
 </p>
 </details>
@@ -145,7 +161,7 @@ none.
 <details><summary>1 Path Parameter</summary>
 <p>
 
-> id_menu: integer
+> id_menu: integer #required
 
 </p>
 </details>
@@ -161,15 +177,12 @@ none.
     "data": {
         "menu": {
             "id_menu": 3,
-            "nama": "thai tea",
+            "nama": "Lemon Tea",
             "kategori": "minuman",
             "harga": 9000,
             "deskripsi": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "foto": null,
-            "status": 1,
-            "is_deleted": 0,
-            "created_at": "2022-01-17 09:42:03",
-            "created_by": 1
+            "foto": "https://i.ibb.co/RNXcV2s/chicken-katsu.jpg",
+            "status": 1
         },
         "topping": [
             {
@@ -177,39 +190,35 @@ none.
                 "id_menu": 3,
                 "keterangan": "boba",
                 "type": "topping",
-                "harga": 2000,
-                "is_deleted": 0
+                "harga": 2000
             },
             {
                 "id_detail": 2,
                 "id_menu": 3,
                 "keterangan": "oreo",
                 "type": "topping",
-                "harga": 2000,
-                "is_deleted": 0
+                "harga": 2000
             }
         ],
         "level": [
             {
                 "id_detail": 3,
                 "id_menu": 3,
-                "keterangan": "less ice",
+                "keterangan": "1",
                 "type": "level",
-                "harga": 2000,
-                "is_deleted": 0
-            },
-            {
-                "id_detail": 4,
-                "id_menu": 3,
-                "keterangan": "more ice",
-                "type": "level",
-                "harga": 2000,
-                "is_deleted": 0
+                "harga": 2000
             }
         ]
     }
 }
 ```
+
+</p>
+</details>
+<details><summary>204</summary>
+<p>
+
+> This mean that, there is no data can be found on database
 
 </p>
 </details>
@@ -231,7 +240,7 @@ none.
 
 
 # #POST / add new menu
-
+*this will be replace in few days*
 **endpoint**
 ```
 https://javacode.ngodingin.com/api/menu/add
