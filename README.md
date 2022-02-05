@@ -1,9 +1,9 @@
 ## END POINT for JAVA CODE APP (TEAM A)
-> use this as references of JAVA CODE APP Project, this endpoint work both for web and mobile
+> use this as references of JAVA CODE APP Project, this endpoint made for mobile app
 
 *JavaCodeApp API*
 - **Version**: 1.0
-- **Accepts**: application/json, multipart/form-data
+- **Accepts**: application/json
 - **Responds With**: application/json
 
 - **Host**: https://javacode.ngodingin.com/api/
@@ -11,7 +11,7 @@
 
 *if host down, please use host down below*
 
-- **Host**: http://192.168. {ask owner}:8080/landa_db/api/
+- **Host**: http://192.168. {ask owner}/landa_db/api/
 - **Protocols**: http
 
 <details><summary>More Info</summary>
