@@ -390,113 +390,14 @@ none.
 
 
 
-# #GET / order list of one user by status order
+# #GET / order list of one user by status
 
 **endpoint**
 ```
 https://javacode.ngodingin.com/api/order/status/{id_user}/{status}
 ```
 
-### Request body
-none.
-
-### Request Parameters
-
-<details><summary>2 Path Parameter</summary>
-<p>
-
-> id_user: integer #required
-
-> status: integer #required
-
-</p>
-</details>
-
-### Responses
-
-<details><summary>200</summary>
-<p>
-
-```
-{
-    "status_code": 200,
-    "data": [
-        {
-            "id_order": 35,
-            "no_struk": "001/KWT/01/2022",
-            "nama": "dev noersy",
-            "total_bayar": 12000,
-            "tanggal": "2022-01-19",
-            "status": 0,
-            "menu": [
-                {
-                    "id_menu": 9,
-                    "kategori": "makanan",
-                    "nama": "Nasi Goreng",
-                    "foto": "https://i.ibb.co/mRJnq3Z/nasi-goreng.jpg",
-                    "jumlah": 1,
-                    "harga": "10000",
-                    "total": 10000,
-                    "catatan": "test"
-                }
-            ]
-        },
-        {
-            "id_order": 43,
-            "no_struk": "006/KWT/01/2022",
-            "nama": "dev noersy",
-            "total_bayar": 11700,
-            "tanggal": "2022-01-20",
-            "status": 0,
-            "menu": [
-                {
-                    "id_menu": 9,
-                    "kategori": "makanan",
-                    "nama": "Nasi Goreng",
-                    "foto": "https://i.ibb.co/mRJnq3Z/nasi-goreng.jpg",
-                    "jumlah": 1,
-                    "harga": "9000",
-                    "total": 9000,
-                    "catatan": "Testing"
-                }
-            ]
-        }
-    ]
-}
-```
-
-</p>
-</details>
-<details><summary>204</summary>
-<p>
-
-> This mean that, there is no data can be found on database
-
-</p>
-</details>
-<details><summary>403</summary>
-<p>
-
-```
-{
-    "status_code": 403,
-    "errors": [
-        "Mohon maaf, anda tidak mempunyai akses"
-    ]
-}
-```
-
-</p>
-</details>
-
-
-
-# #GET / order list of one user by status is process (0- dalam antrian, 1 - sedang disiapkan, 2 - bisa diambil)
-
-**endpoint**
-```
-https://javacode.ngodingin.com/api/order/status/{id_user}/{status}
-```
+> is process (0- dalam antrian, 1 - sedang disiapkan, 2 - bisa diambil)
 
 ### Request body
 none.
