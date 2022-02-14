@@ -104,6 +104,17 @@ https://javacode.ngodingin.com/api/review/add
 </p>
 </details>
 
+### Schema
+
+<details><summary>Image</summary>
+<p>
+<br> // * image is base64 string
+<br> // * image optional. set image to null if there'is no image.
+<br> // * image can start with "data:image/png;base64,blablabal...." or without it (see above).
+
+</p>
+</details>
+
 ### Responses
 
 <details><summary>200</summary>
@@ -137,10 +148,11 @@ https://javacode.ngodingin.com/api/review/add
 
 ```
 {
-    "status_code": 403,
-    "errors": [
-        "Terjadi kesalahan saat menyimpan data"
-    ]
+    "status_code": 422,
+    "errors": {
+        "message": "Anda hanya dapat melakukan penilaian sebanyak 1 kali dalam sebulan.",
+        "waiting_time": "30 days, 10 hours, 29 minutes and 2 seconds"
+    }
 }
 ```
 
