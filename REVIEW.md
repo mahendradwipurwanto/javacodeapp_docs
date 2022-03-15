@@ -80,6 +80,62 @@ none.
 </p>
 </details>
 
+# #GET / all review by id_user
+
+**endpoint**
+```
+https://javacode.ngodingin.com/api/review/{id_user}
+```
+
+### Request body
+none.
+
+### Responses
+
+<details><summary>200</summary>
+<p>
+
+```
+{
+    "status_code": 200,
+    "data": [
+        "id_review": 1,
+         "id_user": 47,
+         "nama": "dev noersy",
+         "score": 5,
+         "type": "Penyajian Makanan",
+         "review": "Keren bangetsss",
+         "image": "http://localhost/jacode/img/60/review/review_60_6203811375f05.png",
+         "created_at": 2147483647
+    ]
+}
+```
+
+</p>
+</details>
+<details><summary>204</summary>
+<p>
+
+> This mean that, there is no data can be found on database
+
+</p>
+</details>
+<details><summary>422</summary>
+<p>
+
+```
+{
+    "status_code": 422,
+    "errors": [
+        "Terjadi kesalahan saat mengambil data"
+    ]
+}
+```
+
+</p>
+</details>
+
+
 
 
 # #POST / add review
